@@ -1,5 +1,7 @@
-#!/usr/bin/perl -w
+#!/bin/env perl
 use strict;
+use warnings;
+
 #author Joe Rodriguez 2011
 
 $| = 1;

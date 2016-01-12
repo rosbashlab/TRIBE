@@ -1,10 +1,8 @@
-#!/usr/bin/perl
-#Created by Reazur Rahman, 3/1/2016
-
+#!/bin/env perl
 use strict;
 use warnings;
 
-use Getopt::Std;
+#Created by Reazur Rahman, 3/1/2016
 
 my $samfile=$ARGV[0];
     

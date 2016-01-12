@@ -1,5 +1,6 @@
-#!/usr/bin/perl -w
+#!/bin/env perl
 use strict;
+use warnings;
 use Mysql;
 use Benchmark;
 use Getopt::Std;
@@ -19,10 +20,10 @@ getopts( 'a:t:e:g:c:o:j:k:h', \%option );
 my ($annotationfile, $tablename, $exp, $gDNAtablename, $OUTFILE, $tp, $gexp, $gDNAtp);
 
 #MYSQL CONFIG VARIABLES
-my $host = "localhost";
+my $host ="172.16.1.40";
 my $database = "dmseq";
 my $user = "root";
-my $pw = "passward_database_for_root";
+my $pw = "flyawaywithme";
 
 
 #MYSQL TABLE VARIABLES

@@ -1,6 +1,7 @@
-use DBI; 
-use strict; 
+#!/bin/env perl
+use strict;
 use warnings;
+use DBI; 
 use Getopt::Std;
 
 #Author Reazur Rahman 2014
@@ -19,10 +20,10 @@ if ( $option{t} &&  $option{d} ) {
 #my $tablename = "mm_gDNA";
 #my $matrixfile = "/data/sequence2/reazur/mammaledit/chr1/chr1_gDNA.txt";
 #my $matrixfile = "smatrix.txt";
-my $host = "localhost";
+my $host = "172.16.1.40";
 my $database = "dmseq";
 my $user = "root";
-my $password = "password_database_for_root";
+my $password = "flyawaywithme";
 
 my $dsn = "DBI:mysql:$database:$host"; 
 
