@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 use strict;
+#author Joe Rodriguez 2011
 
 $| = 1;
 my $file = $ARGV[0];
