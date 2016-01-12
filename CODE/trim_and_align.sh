@@ -1,11 +1,14 @@
 
 #!/bin/sh
 
+#----- Update the following varibles
 gtf_file="/data/theia/reazur/editing/github/TRIBE/annotation/genes.gtf"
 #dm3 both bowtie and bowtie2 indices
 bowtie_indexes="/data/theia/analysis/dm3/Sequence/bowtie_indexes/genome"
 TRIMMOMATIC_DIR="/home/reazur/SOFTWARE"
 TRIBE_DIR="/data/theia/reazur/editing/github/TRIBE/CODE"
+
+#---------------------
 
 #filelist=`ls *.fastq`#
 #for file in ${filelist[@]}
