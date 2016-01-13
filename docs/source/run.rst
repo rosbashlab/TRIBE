@@ -82,7 +82,7 @@ Now, run the updated shell script from current directory
 
 The minimum coverage of reads in gDNA table is hardcoded to be 9 bases in the perl script (find_rnaeditsites.pl). 
 
-Congratulations!!! You have managed to run the computational pipeline of TIDAL, hope you get exciting results!
+Congratulations!!! You have managed to run the computational pipeline of TRIBE, hope you get exciting results!
 
 
 Outputs
