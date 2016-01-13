@@ -1,8 +1,7 @@
-TRIBE Documentation!
-=================================
+Documentation for TRIBE
+=======================
 
-
-For code visit `GitHub <https://github.com/rosbashlab/TRIBE>`_
+For source code please visit `GitHub <https://github.com/rosbashlab/TRIBE>`_
 
 
 About TRIBE
