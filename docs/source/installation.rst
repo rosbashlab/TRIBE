@@ -24,8 +24,6 @@ Download the source code from github.
 
     cd directory_of_your_choice
     git clone https://github.com/rosbashlab/TRIBE
-    #to see all scripts are located in TRIBE/CODE
-    ls TRIBE/CODE
 
 Resolving Perl and mysql Dependencies
 -------------------------------------
@@ -77,10 +75,10 @@ Check you env variable:
     /bin/env
     #on RHEL 7, i believe it is /usr/bin/env
 
-Now, update the first line of the four perl scripts in source code if using RHEL 7
+Now, update the first line of the four perl scripts in source code if your operating system is RHEL 7, so that the correct version of perl is used for analysis
 ::
 
-    #update rhel 7 if needed 
+    #update to rhel 7 if needed 
     #!/usr/bin/env perl
     
 Also, provide the password for mysql in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.
@@ -100,7 +98,7 @@ The `annotation files <https://github.com/laulabbrandeis/TIDAL/blob/master/annot
     #uncompress the genes.gtf
     gunzip genes.gtf.gz
 
-TRIBE need these two annotation files at different step of the pipeline. These files can updated by the user based on their organism and genome build of interest.
+TRIBE need these two annotation files at different step of the pipeline. These files can updated by the user based on their organism and genome build of interest:
 * exon_dm3_refflat_20141030.txt: RefSeq annotation from UCSC genome browser (table browser, track: Refseq Genes, table: refFlat, output format: all fields from table).
 * genes.gtf: This is refseq annotation in GTF format for dm3 (`link <https://support.illumina.com/sequencing/sequencing_software/igenome.html>`_).  
 
@@ -116,7 +114,7 @@ Update Shell Scripts
 --------------------
 Update the following shell scripts with the location of the TRIBE code, annotation files and Bowtie indices.
 
-** trim_and_align.sh**
+**trim_and_align.sh**
 ::
 
     #location of TRIBE from root
@@ -128,7 +126,7 @@ Update the following shell scripts with the location of the TRIBE code, annotati
 
 If you want to use a different trimmer or aligner, feel free to change the code
 
-** trim_and_align_gDNA.sh**
+**trim_and_align_gDNA.sh**
 ::
 
     #location of TRIBE from root
