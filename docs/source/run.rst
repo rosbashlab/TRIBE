@@ -10,8 +10,8 @@ TRIBE identifies RNA editing sites (A to G change) by comparing RNA sequence fro
 3. Find RNA editing sites by comparing the gDNA and RNA sequence in mysql tables
 
 
-Trim and Align libraries - Step 1
----------------------------------
+1. Trim and Align libraries
+---------------------------
 Trim low quality bases from reads in genomic DNA and RNA libraries (fastq files), and then align to reference transcriptome or reference genome.
 
 A. RNA Libraries
@@ -29,8 +29,8 @@ B. gDNA Libraries (this has to be done only once per strain)
 For both cases, parameter for trimmomatics needs to adjusted based on the length of the library. Default parameters are for 50 base reads, trimming 6 bases from either end of reads. If you have a library with high quality reads, then minimal trimming might be required
 
 
-Load Alignments to MySQL - Step2
---------------------------------
+2. Load Alignments to MySQL
+---------------------------
 Converts the sam alignment file to a matrix format, where base composition from aligned reads at each position is recorded. Then, this is uploaded to a mysql table based on the arguments provided.
 Usage
 ::
@@ -56,8 +56,8 @@ To be clear, the expt name and mysql tablename does not have to be the same. For
 **It important to keep track of the arguments used in this step, because you will need it for the next step**
 
 
-Find RNA edit sites - Step 3
-----------------------------
+3. Find RNA edit sites
+----------------------
 Finally, we find RNA editing sites by comparing the gDNA and RNA sequence in mysql tables. For each position in the genome, the base composition is looked up using the tablename, expt name and replicate/timepoint integer. 
 
 Copy rnaedit_gDNA_RNA.sh to your working directory, and make the necessary changes
@@ -65,7 +65,7 @@ Copy rnaedit_gDNA_RNA.sh to your working directory, and make the necessary chang
 
     cd /directory_of_choice/
     cp /location_from_root/TRIBE/CODE/rnaedit_gDNA_RNA.sh .
-    #open and edit the following variables in the script
+    #open and edit the following variables in the script as needed
     annotationfile="/location_from_root/TRIBE/annotation/exon_dm3_refflat_20141030.txt"
     RNAtablename="testRNA"
     RNAexp="am09"
