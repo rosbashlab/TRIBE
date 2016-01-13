@@ -1,22 +1,29 @@
-.. TRIBE documentation master file, created by
-   sphinx-quickstart on Mon Jan 11 01:42:06 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to TRIBE's documentation!
+TRIBE Documentation!
 =================================
+
+
+For code visit `GitHub <https://github.com/rosbashlab/TRIBE>`_
+
+
+About TRIBE
+-----------
+TRIBE (Targets of RNA-binding proteins Identified By Editing) is a technique used for identificationg of RNA binding protein (RBP) in vivo. TRIBE couples an RBP to the catalytic domain of the Drosophila RNA editing enzyme ADAR and expresses the fusion protein in vivo, RBP targets are marked with novel RNA editing events and identified by sequencing RNA. This repository provides the necessary computational pipeline needed to analyze these RNA sequencing libraries.
+
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
+   installation
+   run
+   outputs
 
+Support
+-------
+Please use Github issues to bring up any errors that occur with software.
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+License
+-------
+The project is licensed under the BSD license.
 
