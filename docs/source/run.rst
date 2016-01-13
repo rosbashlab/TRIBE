@@ -2,6 +2,7 @@ Run
 ===
 
 TRIBE identifies RNA editing sites (A to G change) by comparing RNA sequence from transcriptome with genomic DNA sequence (gDNA) from the same strain. There are major steps in the pipeline:
+
 - 1. Trim low quality bases from reads in gDNA and RNA libraries, and align to reference genome
 
 - 2. Load the alignments into mysql tables for ease of comparison at single nucleotide resolution   
