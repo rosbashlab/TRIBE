@@ -100,6 +100,7 @@ The `annotation files <https://github.com/laulabbrandeis/TIDAL/blob/master/annot
 
 TRIBE need these two annotation files at different step of the pipeline. These files can updated by the user based on their organism and genome build of interest:
 - exon_dm3_refflat_20141030.txt: RefSeq annotation from UCSC genome browser (table browser, track: Refseq Genes, table: refFlat, output format: all fields from table).
+
 - genes.gtf: This is refseq annotation in GTF format for dm3 (`link <https://support.illumina.com/sequencing/sequencing_software/igenome.html>`_).  
 
 Finally, create bowtie and bowtie2 indices for your organism's genome. You need to provide the location of these indices during alignment with tophat2
