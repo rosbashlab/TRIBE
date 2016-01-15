@@ -107,7 +107,7 @@ TRIBE need these two annotation files at different step of the pipeline. These f
 Finally, create bowtie and bowtie2 indices for your organism's genome. You need to provide the location of these indices during alignment with tophat2
 ::
 
-    cd /location_of_genome.fa/ 
+    cd /location_of_genome/ 
     #set up the required bowtie indices, this is a sample code
     bowtie-build genome.fa genome
     bowtie2-build genome.fa genome
