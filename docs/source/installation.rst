@@ -11,7 +11,7 @@ Software Dependencies
 - Tophat2 (v2.0.10)
 - bedtools suite (v. 2.16.2)
 - Perl (up to 5.12.5). 
-- Perl modules DBI.pm (1.631) and MySql.pm. Mysql.pm is incompatible with versions beyond of perl 5.12.5.
+- Perl modules DBI.pm (1.631) and `MySql.pm <http://search.cpan.org/~capttofu/DBD-mysql-3.0008/lib/Mysql.pm>`_. Mysql.pm is incompatible with versions beyond of perl 5.12.5.
 - MySQL database
 - Python (2.7.2, other versions should work) 
 
