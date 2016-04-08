@@ -18,6 +18,10 @@ Contents:
    run
    outputs
 
+Note on Updates
+---------------
+TRIBE computational pipeline has only been tested in one machine. We intend to update the pipeline shortly (May 2016) so that it becomes even simpler to install. In the meantime, if you run into issues please don't hesitate to contact us via github.
+
 Support
 -------
 Please use Github issues to bring up any errors that occur with software.
