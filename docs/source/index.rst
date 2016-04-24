@@ -9,6 +9,17 @@ About TRIBE
 TRIBE (Targets of RNA-binding proteins Identified By Editing) is a technique used for the identification of the targets of RNA binding proteins (RBP) in vivo. TRIBE couples an RBP to the catalytic domain of the Drosophila RNA editing enzyme ADAR and expresses the fusion protein in vivo. As the RBP-ADARcd (catalytic domain) fusion protein lacks the RNA recognition features of ADAR, the specificity of the RBP should determine the editing specificity of the fusion protein.  RBP targets are marked with novel RNA editing events and identified by sequencing RNA. This repository provides the necessary computational pipeline needed to analyze these RNA sequencing libraries.
 
 
+For more details please see:
+
+TRIBE: Hijacking an RNA-Editing Enzyme to Identify Cell-Specific Targets of RNA-Binding Proteins.
+ McMahon AC, Rahman R, Jin H, Shen JL, Fieldsend A, Luo W, Rosbash M.
+   Cell. 2016 Apr 21;165(3):742-53. doi: 10.1016/j.cell.2016.03.007. Epub 2016 Mar 31.
+   PMID: 27040499
+
+
+
+
+...
 Contents:
 
 .. toctree::
