@@ -4,18 +4,18 @@ Installation
 Installation of TRIBE's computational pipeline involves installing a set of softwares, downloading a set of annotation files, and updating the shells scripts to provide their locations.
 
 
-Software Dependencies
----------------------
+Software Dependencies (tested version)
+--------------------------------------
 - Trimmomatics (v. 0.30)
 - Bowtie (v. 1.0.0) and Bowtie2 (v. 2.1.0)
 - Tophat2 (v2.0.10)
 - bedtools suite (v. 2.16.2)
-- Perl (up to 5.12.5). 
-- Perl modules DBI.pm (1.631) and `MySql.pm <http://search.cpan.org/~capttofu/DBD-mysql-3.0008/lib/Mysql.pm>`_. Mysql.pm is incompatible with versions beyond of perl 5.12.5.
+- Perl (5.8.8, 5.12.5, 5.22.1) 
+- Perl modules DBI.pm (1.631, 1.636) 
 - MySQL database
 - Python (2.7.2, other versions should work) 
 
-In future upgrades to the pipeline we will remove this version specific dependencies of Perl. Currently, he version specific dependency of Perl and perl modules are critical. All software version listed above show the version of tool specific dependencies.Operating system is RHEL 5.11.
+TRIBE should work with other version of the software/packages mentioned above. Operating systems: RHEL 5.11 and RHEL 7.2.
 
 Source Code
 -----------
@@ -27,33 +27,14 @@ Download the source code from github.
 
 Resolving Perl and mysql Dependencies
 -------------------------------------
-Here is some code that can be use to set up the Perl dependencies with `perlbrew <http://perlbrew.pl/>`_. If a system admin can help you, then you can try other ways of installation.
+Here is some code that can be use to set up the Perl dependencies.If a system admin can help you, then you can try other ways of installation.
 ::
 
-    #Install perlbrew
-    wget -O - http://install.perlbrew.pl | bash
-    #add the perlbrew bashrc to your current your bash
-    source ~/perl5/perlbrew/etc/bashrc
-    # install the specific version of perl, this will take some time    
-    perlbrew  install perl-5.12.5
-    perlbrew use perl-5.12.5
-    #Check that you are using the correct version of perl (this shows a star next to the active version of perl)
-    perlbrew list
-    #install cpan for easy installation of modules
-    perlbrew install-cpanm
-    #install DBI.pm (1.631)
-    cpanm TIMB/DBI-1.631.tar.gz
+    #install DBI.pm
+    cpanm DBI
 
-update bash shell so that you don't have to repeat some of the initialization step, open .bash_profile
-::
 
-    nano .bash_profile
-    #add these two lines at the end of the file,  
-    source ~/perl5/perlbrew/etc/bashrc
-    perlbrew use 5.12.5
-    #this makes perl 5.12.5 your default perl
-
-Before installing the perl module Mysql.pm, we need to create user in mysql, here is the mysql code once you log on
+Set up the mysql username, here is the mysql code once you log on
 ::
 
     #create user 'username' without password. username should match with the person setting it up.
@@ -61,14 +42,8 @@ Before installing the perl module Mysql.pm, we need to create user in mysql, her
     GRANT ALL PRIVILEGES ON * . * TO 'username'@'localhost';
     FLUSH PRIVILEGES;
     
-Now, back to the shell to install Mysql.pm
-::
 
-    #install Mysql
-    cpanm Mysq
-
-
-Check you env variable:
+Check your env variable:
 ::
 
     which env
@@ -81,7 +56,7 @@ Now, update the first line of the four perl scripts in source code if your opera
     #update to rhel 7 if needed 
     #!/usr/bin/env perl
     
-Also, provide the password for mysql in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.
+**Also, provide the password for mysql (if any) in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable (localhost) to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.**
 
 Finally, *load_matrix_data.pl* and *find_rnaeditsites.pl* assumes that a mysql database called "dmseq" has already been created
 ::
