@@ -26,7 +26,7 @@ Contents:
    installation
    run
    outputs
-
+   example
 
 Support
 -------

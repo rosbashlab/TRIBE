@@ -15,7 +15,7 @@ Software Dependencies (tested version)
 - MySQL database
 - Python (2.7.2, other versions should work) 
 
-TRIBE should work with other version of the software/packages mentioned above. Operating systems: RHEL 5.11 and RHEL 7.2.
+TRIBE should work with other version of the software/packages mentioned above. Operating systems used: RHEL 5.11 and RHEL 7.2.
 
 Source Code
 -----------
@@ -34,13 +34,15 @@ Here is some code that can be use to set up the Perl dependencies.If a system ad
     cpanm DBI
 
 
-Set up the mysql username, here is the mysql code once you log on
+Set up the mysql username, here is the mysql code once you log on. Then, create a mysql database. The scripts *load_matrix_data.pl* and *find_rnaeditsites.pl* assumes that a mysql database called "dmseq" has already been created, if you want to create a different database for this purpose, then update the scripts accordingly.
 ::
 
     #create user 'username' without password. username should match with the person setting it up.
     CREATE USER 'username@'localhost' IDENTIFIED BY '';
     GRANT ALL PRIVILEGES ON * . * TO 'username'@'localhost';
     FLUSH PRIVILEGES;
+    #create mysql database
+    CREATE DATABASE dmseq;   
     
 
 Check your env variable:
@@ -56,13 +58,13 @@ Now, update the first line of the four perl scripts in source code if your opera
     #update to rhel 7 if needed 
     #!/usr/bin/env perl
     
-**Also, provide the password for mysql (if any) in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable (localhost) to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.**
+**Also, provide username and password for mysql (if any) in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable (localhost) to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.**
 
-Finally, *load_matrix_data.pl* and *find_rnaeditsites.pl* assumes that a mysql database called "dmseq" has already been created
-::
 
-    #after login to mysql, create mysql database
-    CREATE DATABASE dmseq;
+Update Perl Scripts
+-------------------
+Provide username and password for mysql (if any) in *load_matrix_data.pl* and *find_rnaeditsites.pl*. If the mysql database is hosted on a different machine then update the host variable (localhost) to reflect the ip address. This is needed to ensure that the two perl scripts are able to connect to mysql database.
+
 
 Annotation Files
 ----------------
