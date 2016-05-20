@@ -24,7 +24,7 @@ my ($annotationfile, $tablename, $exp, $gDNAtablename, $OUTFILE, $tp, $gexp, $gD
 my $host = "localhost";
 my $database = "dmseq";
 my $user = "reazur"; #mysql username
-my $password = ""; #mysql password, if any
+my $pw = ""; #mysql password, if any
 
 #connect to the mysql database
 my $dsn = "DBI:mysql:$database:$host"; 
