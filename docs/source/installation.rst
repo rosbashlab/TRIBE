@@ -11,7 +11,7 @@ Software Dependencies (tested version)
 - Tophat2 (v2.0.10)
 - bedtools suite (v. 2.16.2)
 - Perl (5.8.8, 5.12.5, 5.22.1) 
-- Perl modules DBI.pm (1.631, 1.636) 
+- Perl module DBI.pm (1.631, 1.636) 
 - MySQL database
 - Python (2.7.2, other versions should work) 
 
