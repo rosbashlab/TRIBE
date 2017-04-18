@@ -27,14 +27,7 @@ Download the source code from github.
 
 Resolving Perl and mysql Dependencies
 -------------------------------------
-Here is some code that can be use to set up the Perl dependencies.If a system admin can help you, then you can try other ways of installation.
-::
-
-    #install DBI.pm
-    cpanm DBI
-
-
-Set up the mysql username, here is the mysql code once you log on. Then, create a mysql database. The scripts *load_matrix_data.pl* and *find_rnaeditsites.pl* assumes that a mysql database called "dmseq" has already been created, if you want to create a different database for this purpose, then update the scripts accordingly.
+Install mysql, here is a helpful web `resource <https://www.ntu.edu.sg/home/ehchua/programming/sql/MySQL_HowTo.html>`_. Set up the mysql username, here is the mysql code once you log on. Then, create a mysql database. The scripts *load_matrix_data.pl* and *find_rnaeditsites.pl* assumes that a mysql database called "dmseq" has already been created, if you want to create a different database for this purpose, then update the scripts accordingly.
 ::
 
     #create user 'username' without password. username should match with the person setting it up.
@@ -44,6 +37,15 @@ Set up the mysql username, here is the mysql code once you log on. Then, create 
     #create mysql database
     CREATE DATABASE dmseq;   
     
+Here is some code that can be use to set up the Perl dependencies.If a system admin can help you, then you can try other ways of installation.
+::
+
+    #install DBI.pm
+    cpanm DBI
+    #you will need the devel packages for mariadb(mysql), otherwise you won't need it
+    yum install mariadb-devel
+    #install DBD::mysql
+    cpanm DBD::mysql
 
 Check your env variable:
 ::
