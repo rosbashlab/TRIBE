@@ -37,6 +37,8 @@ perl $TRIBE_DIR/create_unique_mapped_sam.pl $prefix"_g2.sam" > $prefix".sam"
 rm $prefix"_g2.sam"
 
 samtools view -bSh  $prefix".sam" >  $prefix".bam"
+# The sam file produced by tophat is sorted by default. 
+#for the code to work in the next step (create matrix file for transcriptome) you need to have a sorted sam file
 
 #------------
 echo "Done with tophat (uniquely mapped)"
