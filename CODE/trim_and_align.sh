@@ -21,6 +21,7 @@ trim_outfile=$prefix.trim.fastq
 avgquality="30"
 
 #trim the library as needed, here we are trimming the first 6 and last six base of reads that that 50 base long. The parameter for Trimmomatics needs to be adjusted based on the quality of the reads and length of the library
+#also, if you are confident that the 5' and 3' end of your reads are good quality, then you can trim less of the reads
 java -jar $TRIMMOMATIC_DIR/Trimmomatic-0.30/trimmomatic-0.30.jar SE -phred33 $trim_input $trim_outfile CROP:45 HEADCROP:6 LEADING:25 TRAILING:25 AVGQUAL:$avgquality MINLEN:19
 
 
@@ -39,6 +40,7 @@ rm $prefix"_g2.sam"
 samtools view -bSh  $prefix".sam" >  $prefix".bam"
 # The sam file produced by tophat is sorted by default. 
 #for the code to work in the next step (create matrix file for transcriptome) you need to have a sorted sam file
+#if want to use a different aligner, just ensure that the sam file produced at the end is sorted
 
 #------------
 echo "Done with tophat (uniquely mapped)"
