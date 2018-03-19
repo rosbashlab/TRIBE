@@ -3,6 +3,7 @@ Documentation for TRIBE
 
 For source code please visit `GitHub <https://github.com/rosbashlab/TRIBE>`_
 
+UPDATE: There is an updated version of this software: `HyperTRIBE <https://github.com/rosbashlab/HyperTRIBE>`_
 
 About TRIBE
 -----------
@@ -13,9 +14,9 @@ For more details please see:
 
 TRIBE: Hijacking an RNA-Editing Enzyme to Identify Cell-Specific Targets of RNA-Binding Proteins.
  McMahon AC, Rahman R, Jin H, Shen JL, Fieldsend A, Luo W, Rosbash M.
-   Cell. 2016 Apr 21;165(3):742-53. doi: 10.1016/j.cell.2016.03.007. Epub 2016 Mar 31.
-   PMID: 27040499
+   Cell. 2016 Apr 21;165(3):742-53. doi: 10.1016/j.cell.2016.03.007. Epub 2016 Mar 31. PMID: 27040499
 
+**There is an improved version of this software (HyperTRIBE), please visit** `GitHub <https://github.com/rosbashlab/HyperTRIBE>`_
 
 
 Contents:
